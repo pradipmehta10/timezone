@@ -1,0 +1,6 @@
+timezone.admin_settings_form:
+  title: 'Configure Timezone'
+  route_name: timezone.configure
+  description: 'Timezone Configuration'
+  parent: system.admin_config_ui
+  weight: 99

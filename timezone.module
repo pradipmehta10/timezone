@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for timezone module.
+ *
+ * Implements hook_theme().
+ */
+function timezone_theme($existing, $type, $theme, $path) {
+
+    return [
+      'timezone_display' => [
+        'variables' => ['data' => []],
+        'template' => 'timezone-display',
+      ],
+    ];
+  }
+
+/**
+ * Hook_uninstall().
+ */
+function timezone_uninstall() {
+  \Drupal::configFactory()->getEditable('timezone_config_form_id.settings')->delete();
+}

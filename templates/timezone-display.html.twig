@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Contains the data from block render array.
+ */
+#}
+  {% if data['time'] is not empty %}
+   <h1> {{ data['time'] }} </h1>
+  {% endif %}
+
+  {% if data['date'] is not empty %}
+    <p>{{ data['date'] }}</p>
+  {% endif %}
+
+  {% if (data['city'] is not empty) and (data['country'] is not empty) %}
+  <p>Time in {{ data['city'] }}, {{ data['country'] }}</p>
+  {% endif %}

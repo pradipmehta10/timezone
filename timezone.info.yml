@@ -1,0 +1,8 @@
+name: TimeZone
+description: Show current date, time and location based on timezone configured.
+core_version_requirement: ^9 || ^10
+type: module
+package: custom
+configure: timezone.configure
+dependencies:
+  - drupal:block

@@ -1,0 +1,6 @@
+services:
+  #timezone.getcurrent_time: // old fashion to use services.
+  Drupal\timezone\services\TimezoneServices:
+    # Services class
+    class: Drupal\timezone\services\TimezoneServices
+    argument: []
