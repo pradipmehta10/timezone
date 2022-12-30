@@ -1,21 +1,18 @@
 <?php
 
-namespace Drupal\timezone\services;
+namespace Drupal\timezone\Services;
 
 use Drupal\Core\Datetime\DrupalDateTime;
 
 /**
- * Class TimezoneServices.
+ * Timezone services based on selected configuration.
  */
 class TimezoneServices {
 
   /**
-   * Return Array of current day,date,time and complete date in response to Display on Block page.
-   *
-   * @param  null
-   *   Not required any parameter to call this method.
+   * Return Array of current day,date,time and complete date in response.
    */
-  public function getCurrentTime(){
+  public function getCurrentTime() {
 
     $config = \Drupal::config('timezone_config_form_id.settings');
 
@@ -28,7 +25,7 @@ class TimezoneServices {
     $time = $date_time->format('h:i A');
 
     return [
-      'date' =>  $date,
+      'date' => $date,
       'time' => $time,
       'full_date' => $full_date,
     ];

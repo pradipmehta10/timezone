@@ -3,4 +3,10 @@ services:
   Drupal\timezone\services\TimezoneServices:
     # Services class
     class: Drupal\timezone\services\TimezoneServices
-    argument: []
+    arguments: []
+
+  # get config factories data from config form.
+  Drupal\timezone\services\GetConfigData:
+    # Services class
+    class: Drupal\timezone\services\GetConfigData
+    arguments: ['@config.factory']
